@@ -8,7 +8,7 @@ import { ModalController, AlertController, NavController} from 'ionic-angular';
 export class AcoesPage {
 
     public pagina_acoes;
-
+  public titleGraffic;
 
   listAcoes: any;
 
@@ -18,10 +18,22 @@ export class AcoesPage {
     public navCtrl: NavController,
     
   ) {
-
+    this.titleGraffic = "Tipos de ações"
     this.pagina_acoes = "Página de Ações";
   }
 
-  
+  // Doughnut
+  public doughnutChartLabels:string[] = ['ON', 'PN', 'Outras'];
+  public doughnutChartData:number[] = [350, 450, 100];
+  public doughnutChartType:string = 'doughnut';
+ 
+  // events
+  public chartClicked(e:any):void {
+    console.log(e);
+  }
+ 
+  public chartHovered(e:any):void {
+    console.log(e);
+  }
 
 }
